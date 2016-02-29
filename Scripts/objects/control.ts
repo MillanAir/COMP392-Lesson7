@@ -3,11 +3,16 @@
 module objects {
     // CONTROL CLASS ++++++++++++++++++++++++++++++++++++++++++
     export class Control { 
-        //PUBLIC INSTANCE VARIABLES +++++++++++++++++++++++++++
-        public rotationSpeed:number;
+        
+        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++
-        constructor(rotationSpeed:number) {
+        constructor(public rotationSpeed:number, public goDown:boolean) {
            this.rotationSpeed = rotationSpeed;
+        }
+        
+        public toggle(){
+            this.goDown = this.goDown ? false:true;
+            console.log(this.goDown);
         }
         
         //PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++
